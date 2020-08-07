@@ -10,5 +10,8 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("Die");
             Destroy(gameObject);
         }
+        if(other.gameObject.tag=="Exit"){
+            Debug.Log("You Win");
+        }
     }
 }
