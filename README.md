@@ -1,7 +1,6 @@
 # Outbreak: Alien Shooter
- You're a sniper working for the government. Aliens have gotten loose and you need to take them down. 
+ Aliens have sent a virus to Earth that turns humans into monsters.
  
- Made by Devonne Busoy and Kaileb Hermansen for MelonJam 2020
+ You must kill the monsters and escape without being infected
  
- The theme is "Outbreak". Outbreak means "the sudden or violent start of something unwelcome" and aliens 
- who have gotten loose is sudden and unwelcome. 
+ The theme is "Outbreak". Outbreak means "the sudden or violent start of something unwelcome" and alien viruses are sudden and unwelcome.
