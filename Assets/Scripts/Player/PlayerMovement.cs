@@ -26,12 +26,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {  
-        body.MovePosition(body.position+moveVelocity*Time.fixedDeltaTime);
+        if(!PlayerCollision.gameOver){
+          body.MovePosition(body.position+moveVelocity*Time.fixedDeltaTime);
+        }
     }
 
     private void LateUpdate()
     {
-        Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mouse.y - transform.position.y, mouse.x - transform.position.x) * Mathf.Rad2Deg - 90);
+        if(!PlayerCollision.gameOver){
+            Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mouse.y - transform.position.y, mouse.x - transform.position.x) * Mathf.Rad2Deg - 90);
+        }
     }
 }

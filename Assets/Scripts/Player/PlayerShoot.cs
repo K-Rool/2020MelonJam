@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public GameObject bullet;
-    Gun playerGun;
+    public Gun playerGun;
 
     // Start is called before the first frame update
     void Start()

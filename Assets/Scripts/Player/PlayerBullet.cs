@@ -11,7 +11,11 @@ public class PlayerBullet : MonoBehaviour
     {
         Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
         rigidbody.velocity = transform.up * speed;
-        Physics2D.IgnoreCollision(GameObject.FindWithTag("Player").GetComponent<Collider2D>(),this.GetComponent<Collider2D>());
+        GameObject[] noCollide = GameObject.FindGameObjectsWithTag("Bullet");
+        for(int i=0; i<noCollide.Length; i++){
+            Physics2D.IgnoreCollision(noCollide[i].GetComponent<Collider2D>(),this.GetComponent<Collider2D>());
+        }
+            Physics2D.IgnoreCollision(GameObject.FindWithTag("Player").GetComponent<Collider2D>(),this.GetComponent<Collider2D>());
     }
     void Update(){
         lifespan-=Time.deltaTime;
